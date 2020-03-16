@@ -939,6 +939,16 @@
   resolved "https://registry.yarnpkg.com/@next/polyfill-nomodule/-/polyfill-nomodule-9.3.0.tgz#5d564a6af7f80f95dba30281dd3420a4a170e219"
   integrity sha512-CPYTirQylgrtXNHfQriy5V/ur4xURkF5PNRiBg5Tac1fQtCFc6mCJzK4+K0eKcn8mPKdo+20stnr9dvOtrajXw==
 
+"@tehshrike/shell-escape-tag@~1.2.2":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@tehshrike/shell-escape-tag/-/shell-escape-tag-1.2.2.tgz#cb2b39d51895bc6eb2d9bbf1785804cd314414df"
+  integrity sha512-n4po2smkOF+DSdnzRwWF/5CCrHF/HJ4VwW8XZbrn+4DnS1bsIVygxls+Xs26oei/ZBXLzUowrH+O7i3UeJLfRA==
+  dependencies:
+    any-shell-escape "^0.1.1"
+    inspect-custom-symbol "^1.1.0"
+    lodash.flattendeep "4.4.0"
+    lodash.zip "4.2.0"
+
 "@webassemblyjs/ast@1.8.5":
   version "1.8.5"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.8.5.tgz#51b1c5fe6576a34953bf4b253df9f0d490d9e359"
@@ -1179,6 +1189,11 @@ ansi-styles@^3.2.1:
   integrity sha512-VT0ZI6kZRdTh8YyJw3SMbYm/u+NqfsAxEpWO0Pf9sq8/e94WxxOpPKx9FR1FlyCtOVDNOQ+8ntlqFxiRc+r5qA==
   dependencies:
     color-convert "^1.9.0"
+
+any-shell-escape@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/any-shell-escape/-/any-shell-escape-0.1.1.tgz#d55ab972244c71a9a5e1ab0879f30bf110806959"
+  integrity sha1-1Vq5ciRMcaml4asIefML8RCAaVk=
 
 anymatch@^2.0.0:
   version "2.0.0"
@@ -1715,6 +1730,15 @@ chalk@^1.1.3:
     has-ansi "^2.0.0"
     strip-ansi "^3.0.0"
     supports-color "^2.0.0"
+
+check-if-folder-contents-changed-in-git-commit-range@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/check-if-folder-contents-changed-in-git-commit-range/-/check-if-folder-contents-changed-in-git-commit-range-1.0.1.tgz#e4de67604dd74d6a87310d4db5d845c5647ab781"
+  integrity sha512-MwA7av2wRIhEWq70YJUURe4nhSTjQnudr8HQgkj3pPx7w49rKHl4TJde12NSJzy1l80jHn1RhBQvm756ppccsg==
+  dependencies:
+    minimatch "3.0.4"
+    mri "1.1.0"
+    shell-tag "^1.0.4"
 
 chokidar@^2.0.2:
   version "2.1.8"
@@ -3016,6 +3040,11 @@ inherits@2.0.3:
   resolved "https://registry.yarnpkg.com/inherits/-/inherits-2.0.3.tgz#633c2c83e3da42a502f52466022480f4208261de"
   integrity sha1-Yzwsg+PaQqUC9SRmAiSA9CCCYd4=
 
+inspect-custom-symbol@^1.1.0:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/inspect-custom-symbol/-/inspect-custom-symbol-1.1.1.tgz#18dae2ed4537f3d8e1708626d3756c10d7edf782"
+  integrity sha512-GOucsp9EcdlLdhPUyOTvQDnbFJtp2WBWZV1Jqe+mVnkJQBL3w96+fB84C+JL+EKXOspMdB0eMDQPDp5w9fkfZA==
+
 invariant@^2.2.2:
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/invariant/-/invariant-2.2.4.tgz#610f3c92c9359ce1db616e538008d23ff35158e6"
@@ -3427,6 +3456,11 @@ lodash.curry@4.1.1:
   resolved "https://registry.yarnpkg.com/lodash.curry/-/lodash.curry-4.1.1.tgz#248e36072ede906501d75966200a86dab8b23170"
   integrity sha1-JI42By7ekGUB11lmIAqG2riyMXA=
 
+lodash.flattendeep@4.4.0:
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/lodash.flattendeep/-/lodash.flattendeep-4.4.0.tgz#fb030917f86a3134e5bc9bec0d69e0013ddfedb2"
+  integrity sha1-+wMJF/hqMTTlvJvsDWngAT3f7bI=
+
 lodash.includes@^4.3.0:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/lodash.includes/-/lodash.includes-4.3.0.tgz#60bb98a87cb923c68ca1e51325483314849f553f"
@@ -3476,6 +3510,11 @@ lodash.templatesettings@^4.0.0:
   integrity sha512-stgLz+i3Aa9mZgnjr/O+v9ruKZsPsndy7qPZOchbqk2cnTU1ZaldKK+v7m54WoKIyxiuMZTKT2H81F8BeAc3ZQ==
   dependencies:
     lodash._reinterpolate "^3.0.0"
+
+lodash.zip@4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/lodash.zip/-/lodash.zip-4.2.0.tgz#ec6662e4896408ed4ab6c542a3990b72cc080020"
+  integrity sha1-7GZi5IlkCO1KtsVCo5kLcswIACA=
 
 lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.15, lodash@^4.17.4:
   version "4.17.15"
@@ -3651,7 +3690,7 @@ minimalistic-crypto-utils@^1.0.0, minimalistic-crypto-utils@^1.0.1:
   resolved "https://registry.yarnpkg.com/minimalistic-crypto-utils/-/minimalistic-crypto-utils-1.0.1.tgz#f6c00c1c0b082246e5c4d99dfb8c7c083b2b582a"
   integrity sha1-9sAMHAsIIkblxNmd+4x8CDsrWCo=
 
-minimatch@^3.0.4:
+minimatch@3.0.4, minimatch@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.0.4.tgz#5166e286457f03306064be5497e8dbb0c3d32083"
   integrity sha512-yJHVQEhyqPLUTgt9B83PXu6W3rx4MvvHvSUvToogpwoGDOUQ+yDrR0HRot+yOCdCO7u4hX3pWft6kWBBcqh0UA==
@@ -3710,6 +3749,11 @@ move-concurrently@^1.0.1:
     mkdirp "^0.5.1"
     rimraf "^2.5.4"
     run-queue "^1.0.3"
+
+mri@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/mri/-/mri-1.1.0.tgz#5c0a3f29c8ccffbbb1ec941dcec09d71fa32f36a"
+  integrity sha1-XAo/KcjM/7ux7JQdzsCdcfoy82o=
 
 ms@2.0.0:
   version "2.0.0"
@@ -5209,6 +5253,13 @@ shell-quote@^1.6.1:
   version "1.7.2"
   resolved "https://registry.yarnpkg.com/shell-quote/-/shell-quote-1.7.2.tgz#67a7d02c76c9da24f99d20808fcaded0e0e04be2"
   integrity sha512-mRz/m/JVscCrkMyPqHc/bczi3OQHkLTqXHEFu0zDhK/qfv3UcOA4SVmRCLmos4bhjr9ekVQubj/R7waKapmiQg==
+
+shell-tag@^1.0.4:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/shell-tag/-/shell-tag-1.0.5.tgz#b161ae661acb731647455ed93f616a9042f6cd97"
+  integrity sha512-kwO9Kj4oxWbKPDfkixRUXzcwSQQQcaRBjeB35UXm8QQ7bPdl0fwGn7KZ0jysRspCTNkO9aU8IGEQlkYWoA+yhg==
+  dependencies:
+    "@tehshrike/shell-escape-tag" "~1.2.2"
 
 signal-exit@^3.0.2:
   version "3.0.2"

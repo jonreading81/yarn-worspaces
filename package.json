@@ -6,9 +6,11 @@
         "libs/*"
     ],
     "scripts": {
-        "changed": "node ./changed.js"
+        "compare": "node ./scripts/compare.js $*"
     },
     "devDependencies": {
-        "@kiwicom/monorepo-utils": "^0.24.0"
+        "check-if-folder-contents-changed-in-git-commit-range": "^1.0.1"
+    },
+    "dependencies": {
     }
 }

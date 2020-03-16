@@ -1,0 +1,19 @@
+APP=$1
+COMMIT_RANGE_URL=$2
+
+OLDIFES=$IFS
+IFS='/' COMMIT_RANGE_URL_ARRAY=($COMMIT_RANGE_URL)
+IFS=SOLDIFS
+COMMIT_RANGE_URL_ARRAY_LENGTH="${#COMMIT_RANGE_URL_ARRAY[0]}"
+COMMIT_RANGE="${COMMIT_RANGE_URL_ARRAY[COMMIT_RANGE_URL_ARRAY_LENGTH - 1]}"
+
+
+function join_by { local IFS="$1"; shift; echo "$*"; }
+
+DETERMINISTIC_ROUTE_FILES_AND_FOLDERS_ARRAY=("package.json" "yarn.lock")
+DETERMINISTIC_ROUTE_FILES_AND_FOLDERS_STRING=$(join_by "|" ${DETERMINISTIC_ROUTE_FILES_AND_FOLDERS_ARRAY[*]})
+DID_CHANGE_ROOT_FILES=$(git diff --name-only $COMMIT_RANGE | grep -q "^($DETERMINISTIC_ROUTE_FILES_AND_FOLDERS_STRING)" && echo true || echo false)
+DID_CHANGE_APP_FILES=$(git diff --name-only $COMMIT_RANGE | grep -q "$APP" && echo true || echo false)
+DID_CHANGE_LIB_FILES=$(git diff --name-only $COMMIT_RANGE | grep -q libs && echo true || echo false)
+
+($DID_CHANGE_ROOT_FILES || $DID_CHANGE_APP_FILES || $DID_CHANGE_LIB_FILES) && echo true || echo false
