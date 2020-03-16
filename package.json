@@ -1,0 +1,12 @@
+{
+    "private": true,
+    "name": "yarn-monorepo",
+    "workspaces": [
+        "apps/*",
+        "libs/*"
+    ],
+    "scripts": {},
+    "devDependencies": {
+        "@kiwicom/monorepo-utils": "^0.24.0"
+    }
+}
