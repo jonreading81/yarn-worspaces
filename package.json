@@ -5,7 +5,9 @@
         "apps/*",
         "libs/*"
     ],
-    "scripts": {},
+    "scripts": {
+        "changed": "node ./changed.js"
+    },
     "devDependencies": {
         "@kiwicom/monorepo-utils": "^0.24.0"
     }

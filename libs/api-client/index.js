@@ -1,3 +1,3 @@
-const apiClient = (data) => console.log('tester', data );
+const apiClient = (data) => console.log('test', data );
 
 module.exports = apiClient;
