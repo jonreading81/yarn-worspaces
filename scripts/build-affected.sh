@@ -1,4 +1,4 @@
-COMMIT_RANGE_URL="https://github.com/jonreading81/monorepo-poc/4653c07a97d152108fdbe282055c9fba33b8541a"
+COMMIT_RANGE_URL=$1
 APPS="../apps"
 
 for directory in $(find $APPS -type d -maxdepth 1); 

@@ -6,7 +6,7 @@
         "libs/*"
     ],
     "scripts": {
-        "compare": "node ./scripts/compare.js $*"
+        "affected": "node ./scripts/affected.js $*"
     },
     "devDependencies": {
        
