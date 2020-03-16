@@ -1,6 +1,8 @@
-const folderContentsChanged = require('check-if-folder-contents-changed-in-git-commit-range');
+const folderContentsChanged = require('./folder-content-changed');
 const { exec } = require('child_process');
-const gitRangeString = process.argv[2];
+
+const gitStartHash = process.argv[2];
+const gitEndHash = process.argv[3];
 const command = 'yarn workspaces info --json';
                  
 const parseWorkspaces = (str) => {
@@ -9,7 +11,7 @@ const parseWorkspaces = (str) => {
     return Object.keys(objWorkspaces).map(name => ({name, ...objWorkspaces[name]}));
 }
 
-const isWorkpaceUpdated =  ({location}) => folderContentsChanged(`${location}/**/*.js`, gitRangeString);
+const isWorkpaceUpdated =  ({location}) => folderContentsChanged(`${location}/**/*.js`, gitStartHash, gitEndHash);
 
 const areWorkspaceDependenciesUpdated = ({workspaceDependencies}, updatedWorspacesNames) =>  
     workspaceDependencies.some(workspace =>updatedWorspacesNames.includes(workspace));

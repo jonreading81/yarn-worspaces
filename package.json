@@ -9,7 +9,9 @@
         "compare": "node ./scripts/compare.js $*"
     },
     "devDependencies": {
-        "check-if-folder-contents-changed-in-git-commit-range": "^1.0.1"
+       
+        "minimatch": "^3.0.4",
+        "shell-tag": "^1.0.5"
     },
     "dependencies": {
     }

@@ -4,7 +4,7 @@ import apiClient from '@noths/api-client';
 
 const Home = () => {
   useEffect(()=>{
-    apiClient('hello');
+    apiClient('hellso');
   },[])
 return <h1>Hello</h1>
 }
