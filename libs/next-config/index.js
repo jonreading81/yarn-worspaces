@@ -1,5 +1,5 @@
 
-const withTM = require('next-transpile-modules')(['@noths/shared-components']);
+const withTM = require('next-transpile-modules')(['@noths/shared-components', '@noths/next']);
 
 module.exports = withTM({
     webpack: (config, options) => {
@@ -15,6 +15,3 @@ module.exports = withTM({
     }
 
 });
-
-
-

@@ -1,7 +1,4 @@
-
-const { config } = require('@noths/next');
-
-module.exports = config;
+module.exports = require('@noths/next-config');
 
 
 
