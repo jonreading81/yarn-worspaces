@@ -1,5 +1,15 @@
-import Head from 'next/head'
+import { useEffect } from 'react';
+import { Header, Footer } from '@noths/shared-components';
 
-const Home = () => <h1>Service B</h1>
+const Home = () => {
+    return (
+        <>
+            <Header />
+            <h1>Hello service-b</h1>
+            <Footer />
+        </>
+    );
+
+}
 
 export default Home
