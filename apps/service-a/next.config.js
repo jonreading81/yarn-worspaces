@@ -1,17 +1,20 @@
-module.exports = {
-    webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
 
+const withTM = require('next-transpile-modules')(['@noths/shared-components']);
+
+module.exports = withTM({
+    webpack: (config, options) => {
         if (config.optimization.splitChunks.cacheGroups) {
             config.optimization.splitChunks.cacheGroups.noths = {
                 name: 'noths',
                 chunks: 'all',
-                test: /[\\/]libs[\\/](api-client|shared-components)/,
+                test: /[\\/]@noths[\\/](api-client|shared-components)/,
                 enforce: true
             };
         }
-
         return config;
     }
 
-}
+});
+
+
 

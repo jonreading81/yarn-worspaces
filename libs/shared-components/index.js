@@ -1,4 +1,7 @@
-module.exports = {
-    Header: () => null,
-    Footer: () => null
-};
+import Header from './Header';
+import Footer from './Footer';
+
+export {
+    Header,
+    Footer,
+}
