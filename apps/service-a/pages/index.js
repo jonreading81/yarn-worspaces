@@ -1,12 +1,18 @@
-import {useEffect} from 'react';
-import Head from 'next/head'
+import { useEffect } from 'react';
+import { Header } from '@noths/shared-components';
 import apiClient from '@noths/api-client';
 
 const Home = () => {
-  useEffect(()=>{
+  useEffect(() => {
     apiClient('hellso');
-  },[])
-return <h1>Hello</h1>
+  }, [])
+  return (
+    <>
+      <Header />
+      <h1>Hello</h1>
+    </>
+  );
+
 }
 
 export default Home
