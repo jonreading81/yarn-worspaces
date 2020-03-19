@@ -11,7 +11,7 @@ const Home = () => {
     return (
         <>
             <Header />
-            <Title>Hello service-b</Title>
+            <Title>Service B</Title>
             <Footer />
         </>
     );
