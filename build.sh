@@ -1,9 +1,12 @@
 # Build the apps
-npm --prefix ./apps/service-a run build
-npm --prefix ./apps/service-b run build
+cd ./apps/service-a  && yarn build
+cd ../../
+cd ./apps/service-b && yarn  build
 
 # Copy built assets to the assets folder used by the CDN.
+cd ../../
 rm -rfv ./cdn/.next/*
 mkdir -p ./cdn/.next
+
 cp -a ./apps/service-a/.next/. ./cdn/.next/
 cp -a ./apps/service-b/.next/. ./cdn/.next/

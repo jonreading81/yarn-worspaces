@@ -7,7 +7,7 @@ module.exports = withTM({
             config.optimization.splitChunks.cacheGroups.noths = {
                 name: 'noths',
                 chunks: 'all',
-                test: /[\\/]@noths[\\/](api-client|shared-components)/,
+                test: /[\\/]@noths[\\/](shared-components)/,
                 enforce: true
             };
         }
