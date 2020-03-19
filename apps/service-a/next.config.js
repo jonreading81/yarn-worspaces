@@ -1,4 +1,7 @@
-module.exports = require('@noths/next-config');
+module.exports = {
+    ...require('@noths/next-config'),
+    assetPrefix: 'http://127.0.0.1:8000',
+}
 
 
 

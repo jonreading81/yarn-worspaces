@@ -12,6 +12,9 @@ module.exports = withTM({
             };
         }
         return config;
-    }
+    },
+    generateBuildId: async () => {
+        return 'SHARED_BUILD_ID';
+    },
 
 });
