@@ -1,40 +1,22 @@
 import Link from 'next/link'
 import { ThemeProvider } from 'styled-components';
+import withReduxUsingStore from '@noths/redux/with-redux-using-store';
+import store from '@noths/redux/store';
+import Layout from './layout';
+import theme from './theme';
 
-const theme = {
-    colors: {
-        primary: 'blue',
-    },
-};
-
-
-const Nav = () => (
-    <nav>
-        <ul>
-            <li>
-                <Link href="/service-a">
-                    <a>Service A</a>
-                </Link>
-            </li>
-            <li>
-                <Link href="/service-b">
-                    <a>Service B</a>
-                </Link>
-            </li>
-        </ul>
-
-    </nav>
-);
+//const withRedux = withReduxUsingStore(store);
 
 function MyApp({ Component, pageProps }) {
+    //const ComponentWithRedux = withRedux(Component);
+
     return (
-        <>
-            <h1>App</h1>
-            <Nav />
-            <ThemeProvider theme={theme}>
+        <ThemeProvider theme={theme}>
+            <Layout>
                 <Component {...pageProps} />
-            </ThemeProvider>
-        </>
-    )
+            </Layout>
+        </ThemeProvider>
+    );
 }
+
 export default MyApp;
