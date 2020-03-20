@@ -1,5 +1,9 @@
 
-const withTM = require('next-transpile-modules')(['@noths/shared-components', '@noths/next']);
+const withTM = require('next-transpile-modules')([
+    '@noths/shared-components',
+    '@noths/next',
+    '@noths/redux'
+]);
 
 module.exports = withTM({
     webpack: (config, options) => {
@@ -16,5 +20,4 @@ module.exports = withTM({
     generateBuildId: async () => {
         return 'SHARED_BUILD_ID';
     },
-
 });

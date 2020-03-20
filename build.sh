@@ -1,7 +1,7 @@
 # Build the apps
-cd ./apps/service-a  && yarn build
+cd ./apps/service-a  && rm -rf .next/ && yarn build
 cd ../../
-cd ./apps/service-b && yarn  build
+cd ./apps/service-b  && rm -rf .next/ && yarn build
 
 # Copy built assets to the assets folder used by the CDN.
 cd ../../

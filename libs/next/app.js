@@ -1,12 +1,18 @@
 import App from 'next/app';
 import Link from 'next/link'
-import { ThemeProvider } from 'styled-components'
+import { ThemeProvider } from 'styled-components';
+import withReduxUsingStore from '@noths/redux/with-redux-using-store';
+import initializeStore from '@noths/redux/store';
 
 const theme = {
     colors: {
         primary: 'blue',
     },
 };
+
+const withRedux = withReduxUsingStore(initializeStore);
+const WrappedComponent = ({ children }) => <>{children}</>;
+const ComponentWrappedWithRedux = withRedux(WrappedComponent);
 
 const Nav = () => (
     <nav>
@@ -32,7 +38,9 @@ function MyApp({ Component, pageProps }) {
             <h1>App</h1>
             <Nav />
             <ThemeProvider theme={theme}>
-                <Component {...pageProps} />
+                <ComponentWrappedWithRedux>
+                    <Component {...pageProps} />
+                </ComponentWrappedWithRedux>
             </ThemeProvider>
         </>
     )
