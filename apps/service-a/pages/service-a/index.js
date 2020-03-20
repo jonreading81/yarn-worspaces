@@ -11,7 +11,6 @@ const Title = styled.h1`
   font-size: 50px;
   color: ${({ theme }) => theme.colors.primary};
 `
-
 const Home = () => {
   useEffect(() => {
     apiClient('hello');
@@ -33,7 +32,6 @@ const Home = () => {
       <Footer />
     </>
   );
-
 }
 
 export default Home
